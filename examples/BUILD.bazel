@@ -1,0 +1,65 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary")
+
+# broken: no "testdata.dat" file
+# cc_binary(
+#     name = "binmode",
+#     srcs = ["binmode.c"],
+#     deps = ["//src:sfsexp"],
+#     copts = ["-Isrc"],
+#     data = ["testdata.dat"],
+#     visibility = ["//visibility:public"]
+# )
+
+cc_binary(
+    name = "callbacks",
+    srcs = ["callbacks.c"],
+    deps = ["//src:sfsexp"],
+    copts = ["-Isrc"],
+    data = ["edgelist.dat"],
+    visibility = ["//visibility:public"]
+)
+
+cc_binary(
+    name = "continuations",
+    srcs = ["continuations.c"],
+    deps = ["//src:sfsexp"],
+    copts = ["-Isrc"],
+    data = ["conttest"],
+    visibility = ["//visibility:public"]
+)
+
+cc_binary(
+    name = "packunpack",
+    srcs = ["packunpack.c"],
+    deps = ["//src:sfsexp"],
+    copts = ["-Isrc"],
+    visibility = ["//visibility:public"]
+)
+
+cc_binary(
+    name = "paultest",
+    srcs = ["paultest.c"],
+    deps = ["//src:sfsexp"],
+    copts = ["-Isrc"],
+    data = ["conttest"],
+    visibility = ["//visibility:public"]
+)
+
+cc_binary(
+    name = "rcfile",
+    srcs = ["rcfile.c"],
+    deps = ["//src:sfsexp"],
+    copts = ["-Isrc"],
+    data = ["testrc"],
+    visibility = ["//visibility:public"]
+)
+
+cc_binary(
+    name = "sexpvis",
+    srcs = ["sexpvis.c"],
+    deps = ["//src:sfsexp"],
+    copts = ["-Isrc"],
+    data = ["vis.in"],
+    visibility = ["//visibility:public"]
+)
+

@@ -1,0 +1,37 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary")
+
+cc_binary(
+    name = "ctorture",
+    srcs = ["ctorture.c"],
+    deps = ["//src:sfsexp"],
+    copts = ["-Isrc"],
+    data = ["test_expressions"],
+    visibility = ["//visibility:public"]
+)
+
+cc_binary(
+    name = "error_codes",
+    srcs = ["error_codes.c"],
+    deps = ["//src:sfsexp"],
+    copts = ["-Isrc"],
+    data = ["test_expressions"],
+    visibility = ["//visibility:public"]
+)
+
+cc_binary(
+    name = "readtests",
+    srcs = ["readtests.c"],
+    deps = ["//src:sfsexp"],
+    copts = ["-Isrc"],
+    data = ["test_expressions"],
+    visibility = ["//visibility:public"]
+)
+
+cc_binary(
+    name = "read_and_dump",
+    srcs = ["read_and_dump.c"],
+    deps = ["//src:sfsexp"],
+    copts = ["-Isrc"],
+    visibility = ["//visibility:public"]
+)
+

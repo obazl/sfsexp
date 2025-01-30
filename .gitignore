@@ -1,3 +1,4 @@
+compile
 *~
 *.o
 *.lo
@@ -9,9 +10,19 @@ Makefile.in
 .deps
 install-sh
 missing
+config.guess
+config.h.in
+config.sub
 configure
 config.h
 aclocal.m4
 depcomp
+libtool
+ltmain.sh
+m4
+sfsexp.pc
+src/.libs
+src/*.la
 stamp-h1
+tests/.libs
 autom4te.cache
