@@ -1,0 +1,10 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+cc_library(
+    name = "sfsexp",
+    srcs = glob(["*.c", "*.h"]),
+    hdrs = ["sexp.h", "sexp_ops.h", "sexp_vis.h"],
+    includes = ["."],
+    visibility = ["//visibility:public"]
+)
+

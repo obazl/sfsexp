@@ -1,3 +1,9 @@
+.bazelignore
+.bazeliskrc
+.bazelversion
+.bazel
+bazel-*
+
 *~
 *.o
 *.lo
